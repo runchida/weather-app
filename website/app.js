@@ -29,5 +29,5 @@ const postProjectData = async (url, dataToPost) => {
 }
 
 console.log('Path: ' + url);
-getProjectData(url);
+getProjectData('/');
 postProjectData(url, dataToPost);
