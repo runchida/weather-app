@@ -1,6 +1,6 @@
 /* Global Variables */
 const urlWeather = 'https://api.openweathermap.org/data/2.5/weather?';
-const apiKey = 'b900d49b318c7241818540ea2e1f7bd5';
+const apiKey = 'b900d49b318c7241818540ea2e1f7bd5&units=metric';
 const zip = document.getElementById('zip').value;
 const feeling = document.getElementById('feelings').value;
 
@@ -83,7 +83,7 @@ async function showResult() {
     try {
         const projectData = await projectRes.json();
         if (projectData.main != undefined) {
-            document.getElementById('temp').innerHTML = `It is ${Math.round((projectData.main.temp - 273))} Degrees Celsius`;
+            document.getElementById('temp').innerHTML = `It is ${Math.round(projectData.main.temp)} Degrees Celsius`;
             document.getElementById('content').innerHTML = `And you feel ${projectData.feel}`;
             document.getElementById('date').innerHTML = `It is ${getTime(projectData.dt)}, so the time to be happy :D`;
         }
