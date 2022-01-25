@@ -1,0 +1,38 @@
+body {
+    background-color: #F5BA3B;
+}
+
+label {
+    margin: 10px;
+}
+
+.main-head {
+    background-color: #F5BA3B;
+    color: white;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    color: #399BA8;
+}
+
+#generate {
+    background-color: #399BA8;
+    color: #F5BA3B;
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    font-size: large;
+}
+
+#entryHolder {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 10px;
+    margin: auto;
+    color: white;
+}

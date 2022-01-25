@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData = { "data": "onServer" };
+const projectData =  {};
 const port = 8000;
 
 // Require Express to run server and routes
@@ -29,21 +29,19 @@ function listening(port) {
 
 // Routes
 // GET Route
-app.get('/', sendProjectData);
+app.get('/get', sendProjectData);
 
 function sendProjectData(req, res) {
     console.log('GET request incoming');
     res.send(projectData);
-    console.log(error);
     console.log(projectData);
 }
 
 //POST Route
-app.post('/', updateProjectData);
+app.post('/post', updateProjectData);
 
 function updateProjectData(req, res) {
-    // projectData.push(req.body);
-    console.log('POST request incoming');
-    // console.log(projectData);
-    console.log(req.body);
+    console.log('POST project data request received');
+    Object.assign(projectData, req.body);
+    console.log(projectData);
 }
