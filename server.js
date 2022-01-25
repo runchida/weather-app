@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData =  {};
+let projectData =  {};
 const port = 8000;
 
 // Require Express to run server and routes
@@ -42,6 +42,6 @@ app.post('/post', updateProjectData);
 
 function updateProjectData(req, res) {
     console.log('POST project data request received');
-    Object.assign(projectData, req.body);
+    projectData = req.body;
     console.log(projectData);
 }
